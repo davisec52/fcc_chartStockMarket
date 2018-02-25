@@ -14,8 +14,10 @@ User Story: I can remove stocks.
 User Story: I can see changes in real-time when any other user adds or removes a stock. For this you will need to use Web Sockets.
 
 I installed the following npm modules on which to build this project:
+
 * express
 * mongoose
-*highcharts
+* highcharts
 * socket.io
+
 The stock data API was courtesy of Alphavantage.
