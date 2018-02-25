@@ -1,0 +1,19 @@
+{
+  "name": "chartstockmarket",
+  "version": "1.0.0",
+  "description": "graphic stock performance comparison",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "author": "evan davis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "highcharts": "^6.0.4",
+    "mongoose": "^5.0.3",
+    "request": "^2.83.0",
+    "socket.io": "^2.0.4"
+  }
+}

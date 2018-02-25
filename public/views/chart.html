@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Chart the Stock Market</title>
+		<meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no">
+		<link rel="stylesheet" href="./css/normalize.css" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<script src="https://code.jquery.com/jquery-3.2.1.js"integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="crossorigin="anonymous"></script>
+		<script src="https://code.highcharts.com/stock/highstock.js"></script>
+	</head>
+
+	<body>
+	<div id="wrapper">
+		<h2>Chart Display Page</h2>
+		<div id="list-anchor">
+			<div id="add-stock-box">
+				<form id="stock-submit">
+					<label id="input-label" name="add-stock">Compare Stocks in Real Time</label>
+					<input id="stock-input" type="text" placeholder="Add Stock Symbol" autoFocus></input>
+					<button id="add-btn" type="submit">Add</button>
+				</form>
+			</div>
+		</div>
+		<div id="loader-box">
+			<p>We appreciate your patience.</br>1s and 0s are hard at work.</p>
+			<div class="loader"></div>
+		</div>
+		<div id="container" style="width:90%; height:400px;"></div>
+	</div>
+	<div id="stock-divs"></div></div>
+
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="/js/chart.js"></script>
+	</body>
+</html>
