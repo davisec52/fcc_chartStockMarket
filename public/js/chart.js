@@ -61,7 +61,12 @@ function createChart(seriesOptions) {
 		}else {
 			let h4Arr =document.getElementsByClassName("symbol-hd");
 			Array.prototype.forEach.call(h4Arr, function(h4, index) {
-				let el = $(h4).contents().prevObject[0].firstChild.data;
+
+			//Exchanging jQuery solution to text extraction for vanilla JS
+				//let el = $(h4).contents().prevObject[0].firstChild.data;
+
+				let el = h4.parentElement.firstChild.data;
+				
 				if(el === inputVal) {
 					alert("Duplicate items. Enter unique stock symbol.");
 					document.getElementById("stock-input").value = "";
@@ -125,11 +130,17 @@ function createChart(seriesOptions) {
 				el.lastChild.addEventListener("click", function(evt) {
 					evt.preventDefault();
 
+					console.log("checking: ", this.parentElement.firstChild.data );
+
 					document.getElementById("loader-box").style.display = "none";
 
-					let name = $(el).contents().filter(function() {
+				//jQuery .contents() method returns element text
+					/*let name = $(el).contents().filter(function() {
 						  return this.nodeType === Node.TEXT_NODE;
-						}).text();
+						}).text();*/
+
+						//Vanilla JS appears to provide simpler solution
+						let name = this.parentElement.firstChild.data;
 
 					try {
 						socket.emit("deleteItem", name);
