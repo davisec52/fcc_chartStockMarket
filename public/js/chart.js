@@ -48,9 +48,10 @@ function createChart(seriesOptions) {
 } //end createChart()
 
 	let addBtn = document.getElementById("add-btn");
-	let run = true;
+	let run;
 	addBtn.addEventListener("click", (evt) => {
 		evt.preventDefault();
+		let run = true;
 		let inputVal = document.getElementById("stock-input").value.toUpperCase();
 		
 		if(document.getElementById("stock-input").value === "") {
