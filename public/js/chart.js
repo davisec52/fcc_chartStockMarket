@@ -63,12 +63,13 @@ function createChart(seriesOptions) {
 				let el = $(h4).contents().prevObject[0].firstChild.data;
 				if(el === inputVal) {
 					alert("Duplicate items. Enter unique stock symbol.");
+					document.getElementById("stock-input").value = "";
 					run = false;
 					return;
 				}
 			});
 		}
-
+		
 		if(!run) {
 			return;
 		}else {

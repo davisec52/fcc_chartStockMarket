@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "graphic stock performance comparison",
   "main": "app.js",
+  "engines": {
+    "node": "8.5.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/app.js"
   },
+
   "author": "evan davis",
   "license": "ISC",
   "dependencies": {

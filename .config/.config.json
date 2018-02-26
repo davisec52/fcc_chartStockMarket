@@ -1,0 +1,7 @@
+{
+	"development": {
+		"MONGODB_URI": "mongodb://localhost/chartStockMarket_db",
+		"PORT": 3000,
+		"API_KEY": "6PSO0G3WSWK9CL3B"
+	}
+}
