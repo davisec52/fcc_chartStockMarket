@@ -59,20 +59,20 @@ function createChart(seriesOptions) {
 			run = false;
 			return;
 		}else {
-			let h4Arr =document.getElementsByClassName("symbol-hd");
+			let h4Arr = document.getElementsByClassName("symbol-hd");
 			Array.prototype.forEach.call(h4Arr, function(h4, index) {
-
+			
 			//Exchanging jQuery solution to text extraction for vanilla JS
 				//let el = $(h4).contents().prevObject[0].firstChild.data;
 
-				let el = h4.parentElement.firstChild.data;
-				
+				let el = h4.firstChild.data;
 				if(el === inputVal) {
 					alert("Duplicate items. Enter unique stock symbol.");
 					document.getElementById("stock-input").value = "";
 					run = false;
 					return;
 				}
+
 			});
 		}
 		
