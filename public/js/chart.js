@@ -1,5 +1,5 @@
 console.log("chart.js connected");
-$(document).ready(function() {
+(function() {
 
 let socket = io();
 
@@ -152,4 +152,4 @@ function createChart(seriesOptions) {
 	socket.on("changeUp", createChart);
 	socket.on("changeBoxes", createBoxes);
 
-});//document
+})();//document
