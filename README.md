@@ -21,3 +21,5 @@ I installed the following npm modules on which to build this project:
 * socket.io
 
 The stock data API was courtesy of Alphavantage.
+
+A working demo can be found on Heroku at https://fcc-stock-market-api.herokuapp.com.
